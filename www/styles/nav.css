@@ -1,0 +1,121 @@
+@import 'normalize.css';
+
+
+@font-face {
+    font-family:'Amatic SC';
+    src: url('/fonts/AmaticSC-Bold.eot');
+	src: url('/fonts/AmaticSC-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AmaticSC-Bold.woff2') format('woff2'),
+		url('/fonts/AmaticSC-Bold.woff') format('woff'),
+		url('/fonts/AmaticSC-Bold.ttf') format('truetype'),
+		url('/fonts/AmaticSC-Bold.svg#Amatic SC Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+@font-face {
+    font-family:'Amatic SC';
+    src: url('/fonts/AmaticSC-Regular.eot');
+	src: url('/fonts/AmaticSC-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AmaticSC-Regular.woff2') format('woff2'),
+		url('/fonts/AmaticSC-Regular.woff') format('woff'),
+		url('/fonts/AmaticSC-Regular.ttf') format('truetype'),
+		url('/fonts/AmaticSC-Regular.svg#Amatic SC Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+/* display:flex: Distribuir el nav en la pantalla  se usa flex, se repate en el espacio */
+/* max-width: 960px al ampliarla pantalla el nav crsce hasta ahi */
+/*repartir el nav en 960 */
+/* align-items: baseline; para estar a la altura del logo*/
+/*************Scrol del tamaño de la section ###############*/
+nav ul {
+    display: flex;
+    max-width: 960px;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* flex: 1 1 20%; es igual que */
+/*   flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20%;
+*/
+nav li {
+    flex: 1 1 20%;
+    text-align: center;
+
+}
+
+.inicio {
+    color: white;
+    
+}
+/* Sin subrrallado: text-decoration: */
+/* Aimacion sobre el hover: transition: color .3s ease; */
+nav li a{
+    padding: 10px;
+    color: blanchedalmond;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .3s ease;
+}
+
+nav li a:hover {
+    color: rgb(109, 238, 109);
+}
+
+/* both se empieza la animacion */
+.logo {
+    animation: fadeEnter .5s ease both 0.25s;
+    display: block;
+}
+
+
+a.logo {
+    font-size: 28px;
+    color:rgb(54, 241, 54);
+    animation-delay: 0s;
+    text-decoration: none;
+}
+
+/* navigation-list {
+
+} */
+
+ @keyframes fadeEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+
+@media screen and (max-width: 600px) and (orientacion: portrait) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        padding-top: 160px;
+    }
+    nav ul li:nth-child(3){
+    order: -1;
+    }
+   
+
+
+} 
+

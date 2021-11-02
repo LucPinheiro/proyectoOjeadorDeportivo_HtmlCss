@@ -1,0 +1,595 @@
+@import 'normalize.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap');
+@import 'icons.css';
+
+
+@font-face {
+    font-family:'Amatic SC';
+    src: url('/fonts/AmaticSC-Bold.eot');
+	src: url('/fonts/AmaticSC-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AmaticSC-Bold.woff2') format('woff2'),
+		url('/fonts/AmaticSC-Bold.woff') format('woff'),
+		url('/fonts/AmaticSC-Bold.ttf') format('truetype'),
+		url('/fonts/AmaticSC-Bold.svg#Amatic SC Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+@font-face {
+    font-family:'Amatic SC';
+    src: url('/fonts/AmaticSC-Regular.eot');
+	src: url('/fonts/AmaticSC-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AmaticSC-Regular.woff2') format('woff2'),
+		url('/fonts/AmaticSC-Regular.woff') format('woff'),
+		url('/fonts/AmaticSC-Regular.ttf') format('truetype'),
+		url('/fonts/AmaticSC-Regular.svg#Amatic SC Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 85px;
+}
+
+h1, h2, .logo{
+    font-family: 'Amatic SC', 'Courier New', Courier, monospace;
+    color: #7fc97f;
+    font-weight: bold;
+    text-align: center;
+  
+}
+
+/* quita los puntos de la lista. Con hijo directo */ 
+header ul, section > ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* z-index para q no sobrepase la imagen sobre el nav */
+header {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}
+
+
+#intro {
+    height: 40vh;
+    min-height: 280px;
+    max-height: 600px;
+    background-color: silver;
+    background-image: url('/images/header-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+section {
+    padding: 10px;
+}
+/*before es hijo de intro */
+/* fundo sobre la imagen del banner */
+#intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+
+}
+
+/* h1 está por debajo del fondo */
+#intro h1 {
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#intro h1 strong {
+    display: block;
+    font-size: 40px;
+    
+}
+
+/******************* Seccion 1 *****************/
+#contenedor-Registro{
+    background-color: rgb(237, 233, 233);
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+    min-height: 380px;
+    justify-content:left;
+    
+} 
+
+#form-Registro {
+    background-color:rgb(113, 142, 113);
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+    align-items:center;
+    
+}
+
+#intro h1 strong {
+    display: block;
+    font-size: 40px;
+    
+}
+ #registro h1 {
+    text-transform: uppercase;
+     display: block;
+    font-size: 40px;
+   
+} 
+
+/******************* Seccion 2 *****************/
+#contenedor-CasosBusqueda{
+   background-color: rgb(71, 70, 70);
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+    min-height: 380px;
+    gap: 10px;
+} 
+
+#casosExito {
+    background-color:rgb(253, 245, 233);
+    border-radius: 10px;
+    width: 900px;
+    height: 600px;
+}
+
+#busqueda {
+    background-color:rgb(253, 245, 233);
+    border-radius: 10px;
+    width: 900px;
+    height: 600px;
+}
+
+/* FORMULARIO BÚSQUEDA */
+label {
+    font-weight: bold;
+    display: block;
+    margin: 1rem 0;
+    
+  }
+
+  input {
+    background: gray;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    padding: 1rem;
+    outline: none;
+   
+ 
+  }
+
+  button {
+    background: gray;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem 8rem;
+
+  }
+
+/******************* Seccion 3 *****************/
+#contenedor-FuncionApp-Padre {
+    background-color: rgb(166, 163, 163);
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+    min-height:700px;
+    justify-content:left;
+  
+
+    
+}
+
+/* .FuncionApp{
+    gap: 10px;
+}  */
+#comoFunciona {
+    background-color:rgb(97, 112, 97);
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+    height: 280px;
+    gap: 10px;
+
+}
+
+#comoFunciona h1{
+    text-transform: uppercase;
+    position: relative;
+   
+}
+
+/* gap */
+#comoFunciona ul{
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+  
+
+}
+
+.pasos {
+    background-color:green;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(165px, 1fr)); 
+    height: 150px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 16%;
+   
+    justify-content: center;
+    align-items: center;
+
+width: 225px;
+height: 150px;
+position: relative;
+}
+
+
+
+/* width: 225px;
+height: 150px;
+/* box-shadow: 5px 5px 5px gray; */
+/* position: relative; */ 
+
+.pasos + .pasos{
+    margin-left: 10px 0;
+}
+.pasos p{
+    color: white;
+}
+
+ #quienDirigida {
+    background-color:rgb(250, 253, 250);
+    border-radius: 10px;
+    padding: 10px;
+    width: 940px;
+    height: 280px;
+
+    
+} 
+
+
+
+/******************* Funcionalidad *****************/
+.gridContenedor {
+   
+    background-color: rgb(240, 210, 240);
+    display: grid;
+    margin: auto;
+    max-width: 960px;
+    min-height: 380px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  
+    /* grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); */
+    gap: 15px;
+}
+
+.card h2 {
+    color: honeydew;
+    margin: 0;
+  
+}
+/* auto-fill, minmax() rellena segun los elementos q haya */
+.grid {
+    padding: 20px 0;
+    display: grid;
+   
+    /* grid-template-columns: repeat(auto-fill,minmax(165px, 1fr));  */
+   
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 16%;
+    /* gap: 10px; */
+ 
+  
+}
+
+.card {
+    background-color:rgb(113, 142, 113);
+    padding: 20px;
+    border-radius: 10px;
+    width: 225px;
+    height: 150px;
+    /* box-shadow: 5px 5px 5px gray; */
+    position: relative;
+    /*Revisar aqui */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card .icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+/************************************/
+
+/******************* Seccion 4 *****************/
+#contenedor-ContactarMapa {
+    background-color: rgb(71, 70, 70);
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+    min-height: 370px;
+    gap: 10px;
+}
+
+#contactar {
+    background-color:rgb(128, 129, 128);
+    border-radius: 10px;
+    /* opacity: 50; */
+    width: 480px;
+    height: 370px;
+    
+}
+
+#mapa {
+    background-color:rgb(128, 129, 128);
+    border-radius: 10px;
+    width: 480px;
+    height: 370px;
+}
+
+/******************* Footer *****************/
+  footer {
+    background-color: black;
+    padding: 10px;
+  
+}  
+
+footer p {
+    color: white;
+    text-align:center;
+}
+
+footer .logo {
+    color:white;
+    display: inline-block;
+}
+
+.columnaFooter {
+    background-color: rgb(3, 3, 3);
+    color: white;
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+    min-height: 10px;
+}
+
+
+
+.columnaFooter h2 {
+    flex: 0 0 auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* quita los puntos de la lista. Con hijo directo */ 
+footer #contenedor-Footer,ul, section > ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .navFooter li a{
+    padding: 10px;
+    color: blanchedalmond;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+footer .navFooter li a:hover {
+    color: rgb(109, 238, 109);
+}
+
+footer .navFooter {
+    display: flex;
+    padding: 10px;
+    /* nav en columna  */
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ footer .navFooter li::before {
+    content: "";
+    display: inline-block;
+    width:  4px;
+    height: 4px;
+    margin-right: 2px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    vertical-align: middle;
+}  
+
+footer .navContacto {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .navLegal {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+footer .navLegal li a{
+    padding: 10px;
+    color: blanchedalmond;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+footer .navLegal li a:hover {
+    color: rgb(109, 238, 109);
+}
+
+/* vertical-align: middle; para aliñar al menu */ 
+footer .navLegal li::before {
+    content: "";
+    display: inline-block;
+    width:  4px;
+    height: 4px;
+    margin-right: 2px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    vertical-align: middle;
+}  
+
+footer .navSiguenos {
+    padding: 10px;
+    
+
+    justify-content: space-around;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    list-style: none;
+   
+    
+    
+}
+
+/* quita los puntos de la lista. Con hijo directo */ 
+.iconosSiguenos a {
+    color: blanchedalmond;
+    list-style: none;
+    padding: 0;
+}
+
+.iconosSiguenos a:hover {
+    color:greenyellow;
+    list-style: none;
+    padding: 0;
+}
+
+footer .divisoria, hr{
+    height: 1px;
+    background-color: blanchedalmond;
+      
+}
+
+
+
+/* @media screen and (max-width: 600px) and (orientacion: portrait) {
+  
+    body {
+        padding-top: 160px;
+    }
+  
+    #funcionApp ul {
+        flex-direction:column;
+    }
+    .pasos + .pasos{
+        margin: 5px 0;
+    }
+
+
+}  */
+
+
+.top-bar {
+    display: block;
+    height: 35px;
+    border-bottom: 1px solid green;
+    font-size: 14px;
+  }
+  
+    .top-bar .containedor-SocialMidia,
+  .top-bar .row {
+    height: 100%;
+    margin-right: 160px;
+  
+  } 
+  
+  .top-bar a {
+    color: blanchedalmond;
+    list-style: none;
+  }
+  
+  .top-bar a:hover {
+    color: green;
+    text-decoration: none;
+
+  }
+.social-mini-buton a {
+    
+    padding-left: 12px;
+    padding-right: 12px;
+    
+  }
+  
+  .social-mini-button a:not(:last-child) {
+    border-right: 1px solid #dfe1eb;
+  }
+
+
+
+.divSocialMidia {
+position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: right !important;
+}
+  
+
+
